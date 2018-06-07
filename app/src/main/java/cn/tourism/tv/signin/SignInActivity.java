@@ -7,6 +7,7 @@ import android.widget.EditText;
 import com.cb.xlibrary.statusbar.StatusBarUtils;
 import com.cb.xlibrary.view.XCircleImageView;
 
+import cn.tourism.tv.MainActivity;
 import cn.tourism.tv.R;
 import cn.tourism.tv.base.BaseActivity;
 
@@ -47,9 +48,10 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_sign_in://登录
+                launchActivity(MainActivity.class, null);
                 break;
             case R.id.tv_forget_psw://忘记密码
-                launchActivity(ForgetPswActivity.class,null);
+                launchActivity(ForgetPswActivity.class, null);
                 break;
             case R.id.tv_sign_up://注册
                 launchActivity(SignUpActivity.class, null);

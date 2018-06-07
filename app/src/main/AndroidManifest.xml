@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".signin.SignUpActivity" />
-        <activity android:name=".signin.ForgetPswActivity"></activity>
+        <activity android:name=".signin.ForgetPswActivity" />
     </application>
 
 </manifest>
