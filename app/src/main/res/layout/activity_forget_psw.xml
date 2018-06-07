@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.35"
+        android:background="#C9C6B5"
+        android:paddingTop="20dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/icon_back" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.65"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/shape_forget_psw_input_bg"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#DBE0EB"
+                android:minWidth="45dp"
+                android:src="@drawable/xtoast_error" />
+
+            <EditText
+                android:id="@+id/edit_phone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="120dp"
+                android:layout_weight="1"
+                android:background="#F4F4F4"
+                android:digits="@string/digs_phone"
+                android:hint="请输入您的手机号码"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:paddingLeft="10dp"
+                android:textColor="#3B3A3A"
+                android:textColorHint="#3B3A3A"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/shape_forget_psw_input_bg"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#DBE0EB"
+                android:minWidth="45dp"
+                android:src="@drawable/xtoast_error" />
+
+            <EditText
+                android:id="@+id/edit_msg_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="#F4F4F4"
+                android:digits="@string/digs_phone"
+                android:hint="请输入验证码"
+                android:inputType="phone"
+                android:maxLength="6"
+                android:paddingLeft="10dp"
+                android:textColor="#3B3A3A"
+                android:textColorHint="#3B3A3A"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btn_send_msg_code"
+                android:layout_width="93dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/shape_sign_in_bg"
+                android:gravity="center"
+                android:minWidth="93dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:text="获取验证码"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/shape_forget_psw_input_bg"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#DBE0EB"
+                android:minWidth="45dp"
+                android:src="@drawable/xtoast_error" />
+
+            <EditText
+                android:id="@+id/edit_psw"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="120dp"
+                android:layout_weight="1"
+                android:background="#F4F4F4"
+                android:digits="@string/digs_pwd"
+                android:hint="请输入新密码"
+                android:inputType="textPassword"
+                android:maxLength="16"
+                android:paddingLeft="10dp"
+                android:textColor="#3B3A3A"
+                android:textColorHint="#3B3A3A"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/shape_forget_psw_input_bg"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#DBE0EB"
+                android:minWidth="45dp"
+                android:src="@drawable/xtoast_error" />
+
+            <EditText
+                android:id="@+id/edit_again_psw"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="120dp"
+                android:layout_weight="1"
+                android:background="#F4F4F4"
+                android:digits="@string/digs_pwd"
+                android:hint="请再次输入新密码"
+                android:inputType="textPassword"
+                android:maxLength="16"
+                android:paddingLeft="10dp"
+                android:textColor="#3B3A3A"
+                android:textColorHint="#3B3A3A"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_modify_psw"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/shape_sign_in_bg"
+            android:text="修改密码"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+</LinearLayout>

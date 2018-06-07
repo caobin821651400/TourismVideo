@@ -49,6 +49,7 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
             case R.id.btn_sign_in://登录
                 break;
             case R.id.tv_forget_psw://忘记密码
+                launchActivity(ForgetPswActivity.class,null);
                 break;
             case R.id.tv_sign_up://注册
                 launchActivity(SignUpActivity.class, null);
