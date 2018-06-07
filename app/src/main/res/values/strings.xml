@@ -1,8 +1,14 @@
 <resources>
     <string name="app_name">中国旅游Tv</string>
-
+    <string name="tab_home">推荐</string>
+    <string name="tab_live">直播</string>
+    <string name="tab_follw">视频</string>
+    <string name="tab_me">资讯</string>
+    <string name="tab_zhly">智慧旅游</string>
 
     <string name="digs_pwd">1234567890qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM,.!@#_</string>
     <string name="digs_phone">0123456789</string>
     <string name="title_wait">拼命加载中...</string>
+
+
 </resources>
