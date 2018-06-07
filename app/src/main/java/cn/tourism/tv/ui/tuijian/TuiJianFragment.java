@@ -39,7 +39,7 @@ public class TuiJianFragment extends BaseFragment {
 
         LinearLayoutManager manager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(manager);
-        mAdapter = new TuiJianAdapter();
+        mAdapter = new TuiJianAdapter(getActivity());
         mRecyclerView.setAdapter(mAdapter);
 
     }
