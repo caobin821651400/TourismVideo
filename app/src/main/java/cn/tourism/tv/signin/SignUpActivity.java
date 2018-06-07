@@ -50,6 +50,7 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
 
         findViewById(R.id.btn_sign_up).setOnClickListener(this);
         findViewById(R.id.tv_xie_yi).setOnClickListener(this);
+        findViewById(R.id.iv_back).setOnClickListener(this);
         tvSendMsgCode.setOnClickListener(this);
 
         // 构造CountDownTimer对象
@@ -67,6 +68,9 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
                 break;
             case R.id.tv_send_msg_code://发送验证码
                 time.start();
+                break;
+            case R.id.iv_back:
+                finish();
                 break;
         }
     }
