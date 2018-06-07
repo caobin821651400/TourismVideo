@@ -10,6 +10,7 @@
         android:layout_height="45dp">
 
         <com.cb.xlibrary.view.XCircleImageView
+            android:id="@+id/iv_head"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_centerVertical="true"
@@ -17,6 +18,7 @@
             android:src="@drawable/icon_test" />
 
         <TextView
+            android:id="@+id/tv_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -34,6 +36,7 @@
             android:textSize="13sp" />
 
         <ImageView
+            android:id="@+id/iv_camera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -44,4 +47,11 @@
     </RelativeLayout>
 
     <include layout="@layout/line_half_one" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
 </LinearLayout>
