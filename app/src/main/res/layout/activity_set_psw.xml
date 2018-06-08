@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_setting_header" />
+
+
+    <EditText
+        android:id="@+id/edit_psw"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/shape_edit_3dp_bg"
+        android:digits="@string/digs_pwd"
+        android:hint="请输入您的密码"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:padding="12dp"
+        android:textColor="#555555"
+        android:textColorHint="#d8d8d8"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/edit_again_psw"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/shape_edit_3dp_bg"
+        android:digits="@string/digs_pwd"
+        android:hint="请再次输入您的密码"
+        android:inputType="textPassword"
+        android:maxLength="16"
+        android:padding="12dp"
+        android:textColor="#555555"
+        android:textColorHint="#d8d8d8"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_next_step"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/shape_next_step_bg"
+        android:text="下一步"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+</LinearLayout>

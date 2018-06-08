@@ -60,8 +60,14 @@ public class BindPhoneActivity extends BaseActivity implements View.OnClickListe
                 finish();
                 break;
             case R.id.btn_next_step://下一步
-                if (dataCheck())
-                    toastSuccess("成功");
+                if (dataCheck()) {
+                    Bundle bundle = new Bundle();
+                    bundle.putString("msg", "您已成功绑定手机号码");
+                    bundle.putString("btnTxt", "开始修改密码");
+                    bundle.putString("title", "绑定成功");
+                    launchActivity(SetSuccActivity.class, bundle);
+                    finish();
+                }
                 break;
             case R.id.btn_send_msg_code://验证码
                 if (MyUtils.edIsEmpty(editPhone) ||
