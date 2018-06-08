@@ -1,4 +1,4 @@
-package cn.tourism.tv.ui.me.setting;
+package cn.tourism.tv.ui.me;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import com.cb.xlibrary.statusbar.StatusBarUtils;
 
 import cn.tourism.tv.R;
 import cn.tourism.tv.base.BaseActivity;
+import cn.tourism.tv.ui.me.account.AccountSafeActivity;
 
 public class SettingMainActivity extends BaseActivity implements View.OnClickListener {
 

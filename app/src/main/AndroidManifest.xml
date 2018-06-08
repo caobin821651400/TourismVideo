@@ -23,8 +23,9 @@
         <activity android:name=".signin.SignUpActivity" />
         <activity android:name=".signin.ForgetPswActivity" />
         <activity android:name=".ui.me.MeActivity" />
-        <activity android:name=".ui.me.setting.SettingMainActivity" />
-        <activity android:name=".ui.me.setting.AccountSafeActivity"></activity>
+        <activity android:name=".ui.me.SettingMainActivity" />
+        <activity android:name=".ui.me.account.AccountSafeActivity" />
+        <activity android:name=".ui.me.account.BindPhoneActivity"></activity>
     </application>
 
 </manifest>

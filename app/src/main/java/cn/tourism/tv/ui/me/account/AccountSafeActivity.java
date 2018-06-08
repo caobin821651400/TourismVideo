@@ -1,4 +1,4 @@
-package cn.tourism.tv.ui.me.setting;
+package cn.tourism.tv.ui.me.account;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -40,13 +40,11 @@ public class AccountSafeActivity extends BaseActivity implements View.OnClickLis
                 finish();
                 break;
             case R.id.ll_psw://重置密码
-                finish();
                 break;
             case R.id.tv_phone://手机绑定
-                finish();
+                launchActivity(BindPhoneActivity.class, null);
                 break;
             case R.id.tv_real_name://实名
-                finish();
                 break;
         }
     }

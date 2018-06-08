@@ -7,7 +7,6 @@ import com.cb.xlibrary.statusbar.StatusBarUtils;
 
 import cn.tourism.tv.R;
 import cn.tourism.tv.base.BaseActivity;
-import cn.tourism.tv.ui.me.setting.SettingMainActivity;
 
 /**
  * 个人中心
