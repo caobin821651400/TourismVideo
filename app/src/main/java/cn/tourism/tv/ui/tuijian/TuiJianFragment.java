@@ -7,19 +7,17 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.cb.xlibrary.view.XCircleImageView;
-
 import cn.tourism.tv.R;
 import cn.tourism.tv.base.BaseFragment;
+import cn.tourism.tv.ui.me.MeActivity;
 
 /**
  * 描述：推荐界面
  * 作者：曹斌
  * date:2018/6/7 15:47
  */
-public class TuiJianFragment extends BaseFragment {
+public class TuiJianFragment extends BaseFragment implements View.OnClickListener {
 
-    private XCircleImageView ivHead;
     private TextView tvSearch;
     private ImageView ivCamera;
     private RecyclerView mRecyclerView;
@@ -32,7 +30,7 @@ public class TuiJianFragment extends BaseFragment {
 
     @Override
     public void initUI(View v) {
-        ivHead = (XCircleImageView) v.findViewById(R.id.iv_head);
+        v.findViewById(R.id.iv_head).setOnClickListener(this);
         tvSearch = (TextView) v.findViewById(R.id.tv_search);
         ivCamera = (ImageView) v.findViewById(R.id.iv_camera);
         mRecyclerView = (RecyclerView) v.findViewById(R.id.recycler_view);
@@ -46,5 +44,14 @@ public class TuiJianFragment extends BaseFragment {
 
     @Override
     public void lazyInit(Bundle savedInstanceState) {
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.iv_head:
+                launchActivity(MeActivity.class, null);
+                break;
+        }
     }
 }
