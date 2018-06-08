@@ -5,28 +5,7 @@
     android:background="#F8F8F8"
     android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#3D3D3D">
-
-        <ImageView
-            android:id="@+id/iv_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="12dp"
-            android:paddingRight="12dp"
-            android:src="@drawable/icon_back" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="设置"
-            android:textColor="#ffffff"
-            android:textSize="19sp" />
-    </RelativeLayout>
+    <include layout="@layout/common_setting_header" />
     <!--第1个-->
     <LinearLayout
         android:layout_width="match_parent"

@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.TextView;
 
 import com.cb.xlibrary.statusbar.StatusBarUtils;
 
@@ -30,6 +31,7 @@ public class SettingMainActivity extends BaseActivity implements View.OnClickLis
 
     @Override
     public void initUI() {
+        ((TextView) findViewById(R.id.title)).setText("设置");
         checkboxIsWifi = (CheckBox) findViewById(R.id.checkbox_is_wifi);
         checkboxAutoVideo = (CheckBox) findViewById(R.id.checkbox_auto_video);
         findViewById(R.id.iv_back).setOnClickListener(this);
