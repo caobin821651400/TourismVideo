@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_setting_header" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="#f8f8f8" />
+
+    <include layout="@layout/line_1dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_psw"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="密码重置"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="设置密码，修改密码在这里操作"
+                android:textColor="#b3b3b3"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icon_right_more" />
+    </LinearLayout>
+
+    <include layout="@layout/line_1dp" />
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:drawableRight="@drawable/icon_right_more"
+        android:gravity="center_vertical"
+        android:text="手机绑定"
+        android:textSize="15sp" />
+
+    <include layout="@layout/line_1dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="13dp"
+        android:background="#f8f8f8" />
+
+    <include layout="@layout/line_1dp" />
+
+    <TextView
+        android:id="@+id/tv_real_name"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:drawableRight="@drawable/icon_right_more"
+        android:gravity="center_vertical"
+        android:text="实名认证"
+        android:textSize="15sp" />
+
+    <include layout="@layout/line_1dp" />
+</LinearLayout>

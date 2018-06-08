@@ -65,6 +65,7 @@ public class SettingMainActivity extends BaseActivity implements View.OnClickLis
             case R.id.tv_clear_cache://清缓存
                 break;
             case R.id.tv_account_safe://账号安全
+                launchActivity(AccountSafeActivity.class, null);
                 break;
             case R.id.tv_contact_us://联系我们
                 break;
