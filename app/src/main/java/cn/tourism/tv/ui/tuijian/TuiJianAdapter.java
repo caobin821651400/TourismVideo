@@ -13,8 +13,8 @@ import android.widget.AbsListView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.cb.xlibrary.recycler.adapter.XRecyclerViewAdapter;
-import com.cb.xlibrary.recycler.adapter.XViewHolder;
+import com.cb.xlibrary.adapter.XRecyclerViewAdapter;
+import com.cb.xlibrary.adapter.XViewHolder;
 import com.cb.xlibrary.utils.XDensityUtils;
 
 import java.util.ArrayList;

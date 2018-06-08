@@ -46,7 +46,7 @@
 
     </RelativeLayout>
 
-    <include layout="@layout/line_half_one" />
+    <include layout="@layout/line_1dp" />
 
     <android.support.v4.widget.SwipeRefreshLayout
         android:layout_width="match_parent"

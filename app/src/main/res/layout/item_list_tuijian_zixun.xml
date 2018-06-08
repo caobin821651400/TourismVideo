@@ -54,5 +54,5 @@
         </RelativeLayout>
     </LinearLayout>
 
-    <include layout="@layout/line_half_one" />
+    <include layout="@layout/line_1dp" />
 </LinearLayout>
