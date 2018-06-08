@@ -51,10 +51,14 @@ public class SetSuccActivity extends BaseActivity implements View.OnClickListene
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.iv_back:
+                finish();
                 break;
             case R.id.btn_next://开始修改密码
                 if (mButton.getText().equals("开始修改密码")) {
                     launchActivity(SetPswActivity.class, null);
+                    finish();
+                } else if (mButton.getText().equals("返回")) {
+                    finish();
                 }
                 break;
 
