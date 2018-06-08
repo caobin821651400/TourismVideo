@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="45dp">
+    android:layout_height="50dp">
 
     <com.cb.xlibrary.view.XCircleImageView
         android:id="@+id/iv_head"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
         android:layout_centerVertical="true"
         android:layout_marginLeft="10dp"
         android:src="@drawable/icon_test" />
@@ -21,10 +21,10 @@
         android:drawablePadding="5dp"
         android:gravity="center_vertical"
         android:minWidth="230dp"
-        android:paddingBottom="5dp"
+        android:paddingBottom="6dp"
         android:paddingLeft="8dp"
         android:paddingRight="5dp"
-        android:paddingTop="5dp"
+        android:paddingTop="6dp"
         android:text="网上又爆红的歌曲"
         android:textColor="#707070"
         android:textSize="13sp" />

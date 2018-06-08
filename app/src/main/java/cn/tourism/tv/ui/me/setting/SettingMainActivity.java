@@ -1,0 +1,73 @@
+package cn.tourism.tv.ui.me.setting;
+
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.CheckBox;
+
+import com.cb.xlibrary.statusbar.StatusBarUtils;
+
+import cn.tourism.tv.R;
+import cn.tourism.tv.base.BaseActivity;
+
+public class SettingMainActivity extends BaseActivity implements View.OnClickListener {
+
+
+    private CheckBox checkboxIsWifi;
+    private CheckBox checkboxAutoVideo;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        StatusBarUtils.setColor(this, Color.parseColor("#3D3D3D"), 0);
+    }
+
+    @Override
+    public int getRootViewId() {
+        return R.layout.activity_setting_main;
+    }
+
+    @Override
+    public void initUI() {
+        checkboxIsWifi = (CheckBox) findViewById(R.id.checkbox_is_wifi);
+        checkboxAutoVideo = (CheckBox) findViewById(R.id.checkbox_auto_video);
+        findViewById(R.id.iv_back).setOnClickListener(this);
+        findViewById(R.id.tv_my_msg).setOnClickListener(this);
+        findViewById(R.id.tv_check_version).setOnClickListener(this);
+        findViewById(R.id.tv_share).setOnClickListener(this);
+        findViewById(R.id.tv_version).setOnClickListener(this);
+        findViewById(R.id.tv_opinion).setOnClickListener(this);
+        findViewById(R.id.tv_clear_cache).setOnClickListener(this);
+        findViewById(R.id.tv_account_safe).setOnClickListener(this);
+        findViewById(R.id.tv_contact_us).setOnClickListener(this);
+        findViewById(R.id.btn_sign_out).setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.iv_back:
+                finish();
+                break;
+            case R.id.tv_my_msg://我的消息
+                break;
+            case R.id.tv_check_version://检查更新
+                break;
+            case R.id.tv_share://分享
+                break;
+            case R.id.tv_version://版本检查
+                break;
+            case R.id.tv_opinion://意见反馈
+                break;
+            case R.id.tv_clear_cache://清缓存
+                break;
+            case R.id.tv_account_safe://账号安全
+                break;
+            case R.id.tv_contact_us://联系我们
+                break;
+            case R.id.btn_sign_out://退出
+                break;
+        }
+    }
+}

@@ -7,6 +7,7 @@ import com.cb.xlibrary.statusbar.StatusBarUtils;
 
 import cn.tourism.tv.R;
 import cn.tourism.tv.base.BaseActivity;
+import cn.tourism.tv.ui.me.setting.SettingMainActivity;
 
 /**
  * 个人中心
@@ -32,6 +33,7 @@ public class MeActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.ll_wallet).setOnClickListener(this);
         findViewById(R.id.ll_comment).setOnClickListener(this);
         findViewById(R.id.ll_about_me).setOnClickListener(this);
+        findViewById(R.id.iv_setting).setOnClickListener(this);
     }
 
     @Override
@@ -46,6 +48,9 @@ public class MeActivity extends BaseActivity implements View.OnClickListener {
             case R.id.ll_comment://评论管理
                 break;
             case R.id.ll_about_me://关于我们
+                break;
+            case R.id.iv_setting://设置
+                launchActivity(SettingMainActivity.class, null);
                 break;
         }
     }
