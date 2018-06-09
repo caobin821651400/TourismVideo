@@ -10,6 +10,9 @@ import com.cb.xlibrary.statusbar.StatusBarUtils;
 import cn.tourism.tv.R;
 import cn.tourism.tv.base.BaseActivity;
 
+/**
+ * 账号安全
+ */
 public class AccountSafeActivity extends BaseActivity implements View.OnClickListener {
 
 
@@ -40,6 +43,7 @@ public class AccountSafeActivity extends BaseActivity implements View.OnClickLis
                 finish();
                 break;
             case R.id.ll_psw://重置密码
+                launchActivity(SetPswActivity.class,null);
                 break;
             case R.id.tv_phone://手机绑定
                 launchActivity(BindPhoneActivity.class, null);
