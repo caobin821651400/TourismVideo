@@ -30,7 +30,8 @@
         <activity android:name=".ui.me.account.SetPswActivity" />
         <activity android:name=".ui.me.account.IdentityProveActivity" />
         <activity android:name=".ui.me.setting.OpinionActivity" />
-        <activity android:name=".ui.me.setting.ContactUsActivity"></activity>
+        <activity android:name=".ui.me.setting.ContactUsActivity" />
+        <activity android:name=".ui.me.ModifyInfoActivity"></activity>
     </application>
 
 </manifest>
