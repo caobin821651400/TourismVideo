@@ -32,6 +32,8 @@ public class VideoManageActivity extends BaseActivity {
     private VideoAdapter mAdapter;
     private TextView tvDelete;
     private List<String> dataList = new ArrayList<>();
+    //编辑状态
+    private boolean isModify = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +54,6 @@ public class VideoManageActivity extends BaseActivity {
                 finish();
             }
         });
-
         checkboxAll = (CheckBox) findViewById(R.id.checkbox_all);
         tvDelete = findViewById(R.id.tv_delete);
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
@@ -74,7 +75,24 @@ public class VideoManageActivity extends BaseActivity {
         }
         mAdapter.setDataLists(dataList);
 
-
+        //右上角
+        tvDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (isModify) {//编辑
+                    isModify = false;
+                    mAdapter.getSelectList().clear();
+                    tvDelete.setText("删除(0)");
+                    checkboxAll.setVisibility(View.VISIBLE);
+                } else {//删除
+                    isModify = true;
+                    tvDelete.setText("编辑");
+                    checkboxAll.setVisibility(View.INVISIBLE);
+                }
+                mAdapter.notifyDataSetChanged();
+            }
+        });
+        //全选
         checkboxAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -124,6 +142,12 @@ public class VideoManageActivity extends BaseActivity {
                 checkbox.setChecked(true);
             } else {
                 checkbox.setChecked(false);
+            }
+            //
+            if (!isModify) {
+                checkbox.setVisibility(View.VISIBLE);
+            } else {
+                checkbox.setVisibility(View.GONE);
             }
             //点击事件
             checkbox.setOnClickListener(new View.OnClickListener() {
