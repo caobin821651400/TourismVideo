@@ -23,7 +23,7 @@
         <activity android:name=".signin.SignUpActivity" />
         <activity android:name=".signin.ForgetPswActivity" />
         <activity android:name=".ui.me.MeActivity" />
-        <activity android:name=".ui.me.SettingMainActivity"></activity>
+        <activity android:name=".ui.me.SettingMainActivity" />
         <activity android:name=".ui.me.account.AccountSafeActivity" />
         <activity android:name=".ui.me.account.BindPhoneActivity" />
         <activity android:name=".ui.me.account.SetSuccActivity" />
@@ -33,7 +33,8 @@
         <activity android:name=".ui.me.setting.ContactUsActivity" />
         <activity android:name=".ui.me.ModifyInfoActivity" />
         <activity android:name=".ui.me.setting.MyMsgActivity" />
-        <activity android:name=".ui.me.manager.VideoManageActivity"></activity>
+        <activity android:name=".ui.me.manager.VideoManageActivity" />
+        <activity android:name=".ui.me.manager.CommentManageActivity"></activity>
     </application>
 
 </manifest>
