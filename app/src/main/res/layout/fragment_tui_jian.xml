@@ -5,7 +5,7 @@
     android:background="#FFFFFF"
     android:orientation="vertical">
 
-    <include layout="@layout/common_header" />
+    <include layout="@layout/common_search_header" />
 
     <include layout="@layout/line_1dp" />
 

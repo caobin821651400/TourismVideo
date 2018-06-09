@@ -31,7 +31,8 @@
         <activity android:name=".ui.me.account.IdentityProveActivity" />
         <activity android:name=".ui.me.setting.OpinionActivity" />
         <activity android:name=".ui.me.setting.ContactUsActivity" />
-        <activity android:name=".ui.me.ModifyInfoActivity"></activity>
+        <activity android:name=".ui.me.ModifyInfoActivity" />
+        <activity android:name=".ui.me.setting.MyMsgActivity"></activity>
     </application>
 
 </manifest>

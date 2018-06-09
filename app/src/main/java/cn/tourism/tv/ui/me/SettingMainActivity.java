@@ -12,6 +12,7 @@ import cn.tourism.tv.R;
 import cn.tourism.tv.base.BaseActivity;
 import cn.tourism.tv.ui.me.account.AccountSafeActivity;
 import cn.tourism.tv.ui.me.setting.ContactUsActivity;
+import cn.tourism.tv.ui.me.setting.MyMsgActivity;
 import cn.tourism.tv.ui.me.setting.OpinionActivity;
 
 public class SettingMainActivity extends BaseActivity implements View.OnClickListener {
@@ -54,6 +55,7 @@ public class SettingMainActivity extends BaseActivity implements View.OnClickLis
                 finish();
                 break;
             case R.id.tv_my_msg://我的消息
+                launchActivity(MyMsgActivity.class, null);
                 break;
             case R.id.tv_check_version://检查更新
                 break;
