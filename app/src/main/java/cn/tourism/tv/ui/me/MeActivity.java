@@ -8,6 +8,7 @@ import com.cb.xlibrary.statusbar.StatusBarUtils;
 import cn.tourism.tv.R;
 import cn.tourism.tv.base.BaseActivity;
 import cn.tourism.tv.ui.me.manager.CommentManageActivity;
+import cn.tourism.tv.ui.me.manager.MeCollectionActivity;
 import cn.tourism.tv.ui.me.manager.VideoManageActivity;
 
 /**
@@ -44,6 +45,7 @@ public class MeActivity extends BaseActivity implements View.OnClickListener {
                 launchActivity(VideoManageActivity.class, null);
                 break;
             case R.id.ll_collection://我的收藏
+                launchActivity(MeCollectionActivity.class, null);
                 break;
             case R.id.ll_wallet://我的钱包
                 break;

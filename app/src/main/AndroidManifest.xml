@@ -34,7 +34,8 @@
         <activity android:name=".ui.me.ModifyInfoActivity" />
         <activity android:name=".ui.me.setting.MyMsgActivity" />
         <activity android:name=".ui.me.manager.VideoManageActivity" />
-        <activity android:name=".ui.me.manager.CommentManageActivity"></activity>
+        <activity android:name=".ui.me.manager.CommentManageActivity" />
+        <activity android:name=".ui.me.manager.MeCollectionActivity"></activity>
     </application>
 
 </manifest>
