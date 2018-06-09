@@ -8,7 +8,9 @@
 
     <string name="digs_pwd">1234567890qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM,.!@#_</string>
     <string name="digs_phone">0123456789</string>
+    <string name="digs_id_card">0123456789X</string>
     <string name="title_wait">拼命加载中...</string>
+    <string name="id_card_hint">个人身份证照片正反面各一张，保持身份证号码、照片清晰可见</string>
 
 
 </resources>

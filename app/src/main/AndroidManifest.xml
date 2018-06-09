@@ -27,7 +27,8 @@
         <activity android:name=".ui.me.account.AccountSafeActivity" />
         <activity android:name=".ui.me.account.BindPhoneActivity" />
         <activity android:name=".ui.me.account.SetSuccActivity" />
-        <activity android:name=".ui.me.account.SetPswActivity"></activity>
+        <activity android:name=".ui.me.account.SetPswActivity" />
+        <activity android:name=".ui.me.account.IdentityProveActivity"></activity>
     </application>
 
 </manifest>
