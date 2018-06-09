@@ -11,6 +11,7 @@ import com.cb.xlibrary.statusbar.StatusBarUtils;
 import cn.tourism.tv.R;
 import cn.tourism.tv.base.BaseActivity;
 import cn.tourism.tv.ui.me.account.AccountSafeActivity;
+import cn.tourism.tv.ui.me.setting.OpinionActivity;
 
 public class SettingMainActivity extends BaseActivity implements View.OnClickListener {
 
@@ -62,6 +63,7 @@ public class SettingMainActivity extends BaseActivity implements View.OnClickLis
             case R.id.tv_version://版本检查
                 break;
             case R.id.tv_opinion://意见反馈
+                launchActivity(OpinionActivity.class, null);
                 break;
             case R.id.tv_clear_cache://清缓存
                 break;

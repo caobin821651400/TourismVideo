@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_setting_header" />
+
+    <EditText
+        android:id="@+id/edit_name"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/shape_edit_3dp_bg"
+        android:hint="您的昵称"
+        android:maxLength="6"
+        android:padding="12dp"
+        android:singleLine="true"
+        android:textColor="#555555"
+        android:textColorHint="#d8d8d8"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/edit_phone"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/shape_edit_3dp_bg"
+        android:digits="@string/digs_phone"
+        android:hint="您的电话"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:padding="12dp"
+        android:textColor="#555555"
+        android:textColorHint="#d8d8d8"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/edit_opinion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/shape_edit_3dp_bg"
+        android:gravity="top|left"
+        android:hint="您的意见和建议........"
+        android:maxLength="100"
+        android:minHeight="100dp"
+        android:padding="12dp"
+        android:singleLine="true"
+        android:textColor="#555555"
+        android:textColorHint="#d8d8d8"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_commit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/shape_next_step_bg"
+        android:text="提交"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+</LinearLayout>
