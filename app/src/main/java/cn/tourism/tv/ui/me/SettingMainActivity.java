@@ -11,14 +11,13 @@ import com.cb.xlibrary.statusbar.StatusBarUtils;
 import cn.tourism.tv.R;
 import cn.tourism.tv.base.BaseActivity;
 import cn.tourism.tv.ui.me.account.AccountSafeActivity;
+import cn.tourism.tv.ui.me.setting.ContactUsActivity;
 import cn.tourism.tv.ui.me.setting.OpinionActivity;
 
 public class SettingMainActivity extends BaseActivity implements View.OnClickListener {
 
-
     private CheckBox checkboxIsWifi;
     private CheckBox checkboxAutoVideo;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +70,7 @@ public class SettingMainActivity extends BaseActivity implements View.OnClickLis
                 launchActivity(AccountSafeActivity.class, null);
                 break;
             case R.id.tv_contact_us://联系我们
+                launchActivity(ContactUsActivity.class, null);
                 break;
             case R.id.btn_sign_out://退出
                 break;

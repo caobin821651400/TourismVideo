@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
-        <activity android:name=".signin.SignInActivity"></activity>
+        <activity android:name=".signin.SignInActivity" />
         <activity android:name=".signin.SignUpActivity" />
         <activity android:name=".signin.ForgetPswActivity" />
         <activity android:name=".ui.me.MeActivity" />
@@ -29,7 +29,8 @@
         <activity android:name=".ui.me.account.SetSuccActivity" />
         <activity android:name=".ui.me.account.SetPswActivity" />
         <activity android:name=".ui.me.account.IdentityProveActivity" />
-        <activity android:name=".ui.me.setting.OpinionActivity"></activity>
+        <activity android:name=".ui.me.setting.OpinionActivity" />
+        <activity android:name=".ui.me.setting.ContactUsActivity"></activity>
     </application>
 
 </manifest>
