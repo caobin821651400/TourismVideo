@@ -37,8 +37,9 @@
         <activity android:name=".ui.me.manager.CommentManageActivity" />
         <activity android:name=".ui.me.manager.MeCollectionActivity" />
         <activity android:name=".ui.me.wallet.MeWalletActivity" />
-        <activity android:name=".ui.me.wallet.MeShouYiActivity"/>
-        <activity android:name=".ui.me.wallet.BalanceActivity"/>
+        <activity android:name=".ui.me.wallet.MeShouYiActivity" />
+        <activity android:name=".ui.me.wallet.BalanceActivity" />
+        <activity android:name=".ui.me.wallet.TiXianActivity"></activity>
     </application>
 
 </manifest>

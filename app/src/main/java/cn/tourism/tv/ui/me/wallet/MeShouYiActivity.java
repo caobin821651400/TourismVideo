@@ -44,6 +44,7 @@ public class MeShouYiActivity extends BaseActivity implements View.OnClickListen
                 finish();
                 break;
             case R.id.btn_ti_xian://提现
+                launchActivity(TiXianActivity.class, null);
                 break;
             case R.id.btn_setting_psw://设置密码
                 break;

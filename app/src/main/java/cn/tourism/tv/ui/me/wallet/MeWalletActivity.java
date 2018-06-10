@@ -59,6 +59,7 @@ public class MeWalletActivity extends BaseActivity implements View.OnClickListen
             case R.id.tv_recharge://充值
                 break;
             case R.id.tv_ti_xian://提现
+                launchActivity(TiXianActivity.class,null);
                 break;
             case R.id.tv_wei_chat://微信
                 break;
