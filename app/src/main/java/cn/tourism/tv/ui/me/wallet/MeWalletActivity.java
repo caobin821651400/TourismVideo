@@ -44,6 +44,8 @@ public class MeWalletActivity extends BaseActivity implements View.OnClickListen
         findViewById(R.id.iv_back).setOnClickListener(this);
         findViewById(R.id.tv_recharge).setOnClickListener(this);
         findViewById(R.id.tv_ti_xian).setOnClickListener(this);
+        findViewById(R.id.ll_balance).setOnClickListener(this);
+        findViewById(R.id.ll_shou_yi).setOnClickListener(this);
         tvWeiChat.setOnClickListener(this);
         tvZfb.setOnClickListener(this);
     }
@@ -55,16 +57,17 @@ public class MeWalletActivity extends BaseActivity implements View.OnClickListen
                 finish();
                 break;
             case R.id.tv_recharge://充值
-                finish();
                 break;
             case R.id.tv_ti_xian://提现
-                finish();
                 break;
             case R.id.tv_wei_chat://微信
-                finish();
                 break;
             case R.id.tv_zfb://支付宝
-                finish();
+                break;
+            case R.id.ll_balance://余额
+                break;
+            case R.id.ll_shou_yi://我的收益
+                launchActivity(MeShouYiActivity.class, null);
                 break;
         }
     }
