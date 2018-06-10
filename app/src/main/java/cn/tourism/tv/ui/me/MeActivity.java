@@ -10,6 +10,7 @@ import cn.tourism.tv.base.BaseActivity;
 import cn.tourism.tv.ui.me.manager.CommentManageActivity;
 import cn.tourism.tv.ui.me.manager.MeCollectionActivity;
 import cn.tourism.tv.ui.me.manager.VideoManageActivity;
+import cn.tourism.tv.ui.me.wallet.MeWalletActivity;
 
 /**
  * 个人中心
@@ -36,6 +37,7 @@ public class MeActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.ll_comment).setOnClickListener(this);
         findViewById(R.id.ll_about_me).setOnClickListener(this);
         findViewById(R.id.iv_setting).setOnClickListener(this);
+        findViewById(R.id.iv_head).setOnClickListener(this);
     }
 
     @Override
@@ -48,6 +50,7 @@ public class MeActivity extends BaseActivity implements View.OnClickListener {
                 launchActivity(MeCollectionActivity.class, null);
                 break;
             case R.id.ll_wallet://我的钱包
+                launchActivity(MeWalletActivity.class, null);
                 break;
             case R.id.ll_comment://评论管理
                 launchActivity(CommentManageActivity.class, null);
@@ -56,6 +59,9 @@ public class MeActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.iv_setting://设置
                 launchActivity(SettingMainActivity.class, null);
+                break;
+            case R.id.iv_head:
+                launchActivity(ModifyInfoActivity.class, null);
                 break;
         }
     }
