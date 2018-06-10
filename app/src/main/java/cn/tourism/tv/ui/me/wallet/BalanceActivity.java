@@ -48,8 +48,10 @@ public class BalanceActivity extends BaseActivity implements View.OnClickListene
                 launchActivity(TiXianActivity.class,null);
                 break;
             case R.id.btn_setting_psw://设置密码
+                launchActivity(SetPayPswActivity.class,null);
                 break;
             case R.id.btn_recharge://充值
+                launchActivity(RechargeActivity.class,null);
                 break;
         }
     }

@@ -39,7 +39,9 @@
         <activity android:name=".ui.me.wallet.MeWalletActivity" />
         <activity android:name=".ui.me.wallet.MeShouYiActivity" />
         <activity android:name=".ui.me.wallet.BalanceActivity" />
-        <activity android:name=".ui.me.wallet.TiXianActivity"></activity>
+        <activity android:name=".ui.me.wallet.TiXianActivity" />
+        <activity android:name=".ui.me.wallet.RechargeActivity"></activity>
+        <activity android:name=".ui.me.wallet.SetPayPswActivity"></activity>
     </application>
 
 </manifest>

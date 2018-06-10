@@ -47,6 +47,7 @@ public class MeShouYiActivity extends BaseActivity implements View.OnClickListen
                 launchActivity(TiXianActivity.class, null);
                 break;
             case R.id.btn_setting_psw://设置密码
+                launchActivity(SetPayPswActivity.class,null);
                 break;
         }
     }
