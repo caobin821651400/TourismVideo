@@ -11,9 +11,9 @@ import cn.tourism.tv.R;
 import cn.tourism.tv.base.BaseActivity;
 
 /**
- * 我的收益
+ * 账户余额
  */
-public class MeShouYiActivity extends BaseActivity implements View.OnClickListener {
+public class BalanceActivity extends BaseActivity implements View.OnClickListener {
 
     private TextView tvMoney;
 
@@ -25,16 +25,17 @@ public class MeShouYiActivity extends BaseActivity implements View.OnClickListen
 
     @Override
     public int getRootViewId() {
-        return R.layout.activity_me_shou_yi;
+        return R.layout.activity_balance;
     }
 
     @Override
     public void initUI() {
-        ((TextView) findViewById(R.id.title)).setText("我的收益");
+        ((TextView) findViewById(R.id.title)).setText("账户余额");
         tvMoney = (TextView) findViewById(R.id.tv_money);
         findViewById(R.id.iv_back).setOnClickListener(this);
         findViewById(R.id.btn_ti_xian).setOnClickListener(this);
         findViewById(R.id.btn_setting_psw).setOnClickListener(this);
+        findViewById(R.id.btn_recharge).setOnClickListener(this);
     }
 
     @Override
@@ -46,6 +47,8 @@ public class MeShouYiActivity extends BaseActivity implements View.OnClickListen
             case R.id.btn_ti_xian://提现
                 break;
             case R.id.btn_setting_psw://设置密码
+                break;
+            case R.id.btn_recharge://充值
                 break;
         }
     }

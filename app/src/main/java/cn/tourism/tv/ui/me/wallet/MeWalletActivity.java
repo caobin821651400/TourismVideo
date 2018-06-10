@@ -65,6 +65,7 @@ public class MeWalletActivity extends BaseActivity implements View.OnClickListen
             case R.id.tv_zfb://支付宝
                 break;
             case R.id.ll_balance://余额
+                launchActivity(BalanceActivity.class, null);
                 break;
             case R.id.ll_shou_yi://我的收益
                 launchActivity(MeShouYiActivity.class, null);
