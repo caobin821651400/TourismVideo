@@ -42,7 +42,8 @@
         <activity android:name=".ui.me.wallet.TiXianActivity" />
         <activity android:name=".ui.me.wallet.RechargeActivity" />
         <activity android:name=".ui.me.wallet.SetPayPswActivity" />
-        <activity android:name=".ui.me.fans.FansActivity"></activity>
+        <activity android:name=".ui.me.fans.FansActivity" />
+        <activity android:name=".ui.zhibo.ZhiBoClassifyActivity"></activity>
     </application>
 
 </manifest>

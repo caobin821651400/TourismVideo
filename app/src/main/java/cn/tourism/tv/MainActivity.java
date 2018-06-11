@@ -5,6 +5,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 
+import com.cb.xlibrary.utils.XLogUtils;
+
 import cn.tourism.tv.base.BaseActivity;
 import cn.tourism.tv.ui.info.InfoFragment;
 import cn.tourism.tv.ui.tuijian.TuiJianFragment;
@@ -45,6 +47,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.rbZhly).setOnClickListener(this);
 
         setTabSelection(currentTabIndex);
+
+      //  XLogUtils.d(TokenUtil.getSafeStr("zl6@ITVP"));
     }
 
     @Override

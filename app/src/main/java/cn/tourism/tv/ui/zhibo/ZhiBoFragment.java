@@ -54,6 +54,13 @@ public class ZhiBoFragment extends BaseFragment {
         listFragment = new ArrayList<>();
         listTitle = new ArrayList<>();
 
+        btnMore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                launchActivity(ZhiBoClassifyActivity.class, null);
+            }
+        });
+
 
         //刷新数据
         listTitle.add("旅游");
