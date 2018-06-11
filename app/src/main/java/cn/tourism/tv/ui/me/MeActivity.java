@@ -7,6 +7,7 @@ import com.cb.xlibrary.statusbar.StatusBarUtils;
 
 import cn.tourism.tv.R;
 import cn.tourism.tv.base.BaseActivity;
+import cn.tourism.tv.ui.me.fans.FansActivity;
 import cn.tourism.tv.ui.me.manager.CommentManageActivity;
 import cn.tourism.tv.ui.me.manager.MeCollectionActivity;
 import cn.tourism.tv.ui.me.manager.VideoManageActivity;
@@ -16,7 +17,6 @@ import cn.tourism.tv.ui.me.wallet.MeWalletActivity;
  * 个人中心
  */
 public class MeActivity extends BaseActivity implements View.OnClickListener {
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +38,11 @@ public class MeActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.ll_about_me).setOnClickListener(this);
         findViewById(R.id.iv_setting).setOnClickListener(this);
         findViewById(R.id.iv_head).setOnClickListener(this);
+
+        findViewById(R.id.ll_care).setOnClickListener(this);
+        findViewById(R.id.ll_dynamic).setOnClickListener(this);
+        findViewById(R.id.ll_fans).setOnClickListener(this);
+
     }
 
     @Override
@@ -61,7 +66,14 @@ public class MeActivity extends BaseActivity implements View.OnClickListener {
                 launchActivity(SettingMainActivity.class, null);
                 break;
             case R.id.iv_head:
-                launchActivity(ModifyInfoActivity.class, null);
+                break;
+            case R.id.ll_fans://粉丝
+                launchActivity(FansActivity.class, null);
+                break;
+            case R.id.ll_dynamic://动态
+                break;
+            case R.id.ll_care://关注
+                launchActivity(FansActivity.class, null);
                 break;
         }
     }

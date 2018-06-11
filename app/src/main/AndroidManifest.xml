@@ -40,8 +40,9 @@
         <activity android:name=".ui.me.wallet.MeShouYiActivity" />
         <activity android:name=".ui.me.wallet.BalanceActivity" />
         <activity android:name=".ui.me.wallet.TiXianActivity" />
-        <activity android:name=".ui.me.wallet.RechargeActivity"></activity>
-        <activity android:name=".ui.me.wallet.SetPayPswActivity"></activity>
+        <activity android:name=".ui.me.wallet.RechargeActivity" />
+        <activity android:name=".ui.me.wallet.SetPayPswActivity" />
+        <activity android:name=".ui.me.fans.FansActivity"></activity>
     </application>
 
 </manifest>
