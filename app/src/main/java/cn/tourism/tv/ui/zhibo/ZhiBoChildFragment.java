@@ -82,6 +82,14 @@ public class ZhiBoChildFragment extends BaseViewPagerFragment {
         addHeadView();
         mRecyclerView.setAdapter(mAdapter);
         mAdapter.setDataLists(listDatas);
+
+        mAdapter.setOnItemClickListener(new XRecyclerViewAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View v, int position) {
+                launchActivity(ZhiBoDetailsActivity.class,null);
+
+            }
+        });
     }
 
     /**
@@ -112,7 +120,7 @@ public class ZhiBoChildFragment extends BaseViewPagerFragment {
         private TextView tvTitle;
 
         public ZiXunChildAdapter(@NonNull RecyclerView mRecyclerView) {
-            super(mRecyclerView, R.layout.item_care);
+            super(mRecyclerView, R.layout.item_zhi_bo);
         }
 
         @Override

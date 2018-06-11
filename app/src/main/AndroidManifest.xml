@@ -3,6 +3,12 @@
     package="cn.tourism.tv">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:name=".App"
@@ -43,7 +49,8 @@
         <activity android:name=".ui.me.wallet.RechargeActivity" />
         <activity android:name=".ui.me.wallet.SetPayPswActivity" />
         <activity android:name=".ui.me.fans.FansActivity" />
-        <activity android:name=".ui.zhibo.ZhiBoClassifyActivity"></activity>
+        <activity android:name=".ui.zhibo.ZhiBoClassifyActivity" />
+        <activity android:name=".ui.zhibo.ZhiBoDetailsActivity"></activity>
     </application>
 
 </manifest>

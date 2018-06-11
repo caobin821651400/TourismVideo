@@ -48,7 +48,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         setTabSelection(currentTabIndex);
 
-      //  XLogUtils.d(TokenUtil.getSafeStr("zl6@ITVP"));
+        //XLogUtils.d(TokenUtil.getSafeStr("zl6"));
     }
 
     @Override
