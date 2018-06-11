@@ -26,7 +26,7 @@ import cn.tourism.tv.base.BaseFragment;
 public class FansFragment extends BaseFragment {
     private XSwipeRefreshLayout swipeLayout;
     private RecyclerView mRecyclerView;
-    private ZiXunChildAdapter mAdapter;
+    private FansdAdapter mAdapter;
 
     private List<String> listDatas = new ArrayList<>();
 
@@ -47,7 +47,7 @@ public class FansFragment extends BaseFragment {
         }
         /*******************************/
 
-        mAdapter = new ZiXunChildAdapter(mRecyclerView);
+        mAdapter = new FansdAdapter(mRecyclerView);
         LinearLayoutManager manager = new LinearLayoutManager(getActivity());
         XPaddingDividerDecoration decoration = new XPaddingDividerDecoration
                 .Builder(getActivity())
@@ -75,9 +75,9 @@ public class FansFragment extends BaseFragment {
         super.onStop();
     }
 
-    class ZiXunChildAdapter extends XRecyclerViewAdapter<String> {
+    class FansdAdapter extends XRecyclerViewAdapter<String> {
 
-        public ZiXunChildAdapter(@NonNull RecyclerView mRecyclerView) {
+        public FansdAdapter(@NonNull RecyclerView mRecyclerView) {
             super(mRecyclerView, R.layout.item_fans);
         }
 

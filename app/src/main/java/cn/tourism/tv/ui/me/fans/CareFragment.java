@@ -26,7 +26,7 @@ import cn.tourism.tv.base.BaseFragment;
 public class CareFragment extends BaseFragment {
     private XSwipeRefreshLayout swipeLayout;
     private RecyclerView mRecyclerView;
-    private ZiXunChildAdapter mAdapter;
+    private CareAdapter mAdapter;
 
     private List<String> listDatas = new ArrayList<>();
 
@@ -47,7 +47,7 @@ public class CareFragment extends BaseFragment {
         }
         /*******************************/
 
-        mAdapter = new ZiXunChildAdapter(mRecyclerView);
+        mAdapter = new CareAdapter(mRecyclerView);
         LinearLayoutManager manager = new LinearLayoutManager(getActivity());
         XPaddingDividerDecoration decoration = new XPaddingDividerDecoration
                 .Builder(getActivity())
@@ -75,9 +75,9 @@ public class CareFragment extends BaseFragment {
         super.onStop();
     }
 
-    class ZiXunChildAdapter extends XRecyclerViewAdapter<String> {
+    class CareAdapter extends XRecyclerViewAdapter<String> {
 
-        public ZiXunChildAdapter(@NonNull RecyclerView mRecyclerView) {
+        public CareAdapter(@NonNull RecyclerView mRecyclerView) {
             super(mRecyclerView, R.layout.item_care);
         }
 

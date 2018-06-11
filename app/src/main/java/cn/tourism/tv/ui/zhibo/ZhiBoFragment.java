@@ -1,9 +1,20 @@
 package cn.tourism.tv.ui.zhibo;
 
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.cb.xlibrary.utils.XLogUtils;
+import com.cb.xlibrary.view.XCircleImageView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import cn.tourism.tv.R;
 import cn.tourism.tv.base.BaseFragment;
@@ -15,6 +26,17 @@ import cn.tourism.tv.base.BaseFragment;
  */
 public class ZhiBoFragment extends BaseFragment {
 
+    private XCircleImageView ivHead;
+    private TextView tvSearch;
+    private ImageView ivCamera;
+    private TabLayout tabLayout;
+    private ImageView btnMore;
+    private ViewPager mViewPager;
+
+    private List<Fragment> listFragment;
+    private List<String> listTitle;
+    private MyViewPagerAdapter mFragmentAdapter;
+
     @Override
     public int getRootViewId() {
         return R.layout.fragment_zhi_bo;
@@ -22,12 +44,70 @@ public class ZhiBoFragment extends BaseFragment {
 
     @Override
     public void initUI(View v) {
+        ivHead = (XCircleImageView) v.findViewById(R.id.iv_head);
+        tvSearch = (TextView) v.findViewById(R.id.tv_search);
+        ivCamera = (ImageView) v.findViewById(R.id.iv_camera);
+        tabLayout = (TabLayout) v.findViewById(R.id.tabLayout);
+        btnMore = (ImageView) v.findViewById(R.id.btnMore);
+        mViewPager = (ViewPager) v.findViewById(R.id.view_pager);
 
+        listFragment = new ArrayList<>();
+        listTitle = new ArrayList<>();
+
+
+        //刷新数据
+        listTitle.add("旅游");
+        listTitle.add("时尚");
+        listTitle.add("艺文");
+        listTitle.add("体育");
+        listTitle.add("美食");
+        listTitle.add("音乐");
+        listFragment.add(new ZhiBoChildFragment());
+        listFragment.add(new ZhiBoChildFragment());
+        listFragment.add(new ZhiBoChildFragment());
+        listFragment.add(new ZhiBoChildFragment());
+        listFragment.add(new ZhiBoChildFragment());
+        listFragment.add(new ZhiBoChildFragment());
+
+        mViewPager.setOffscreenPageLimit(5);
+        mFragmentAdapter = new MyViewPagerAdapter(getChildFragmentManager());
+        mViewPager.setAdapter(mFragmentAdapter);
+        tabLayout.setupWithViewPager(mViewPager);
     }
 
     @Override
     public void lazyInit(Bundle savedInstanceState) {
 
         XLogUtils.d("2222222");
+    }
+
+    class MyViewPagerAdapter extends FragmentPagerAdapter {
+
+        public MyViewPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return listFragment.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return listFragment.size();
+        }
+
+//        @Override
+//        public int getItemPosition(Object object) {
+//            return super.getItemPosition(object);
+//        }
+
+        @Override
+        public String getPageTitle(int position) {
+            if (listTitle != null && listTitle.size() != 0) {
+                return listTitle.get(position);
+            }
+            return (String) super.getPageTitle(position);
+        }
     }
 }

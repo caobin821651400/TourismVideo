@@ -7,9 +7,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 
 import com.cb.xlibrary.dialog.XLoadingDialog;
@@ -20,9 +17,8 @@ import cn.tourism.tv.R;
 /**
  *
  */
-public abstract class BaseFragment extends Fragment {
+public abstract class BaseViewPagerFragment extends Fragment {
 
-    private View mRootView;
     // 标记已加载完成，保证懒加载只能加载一次
     private boolean hasLoaded = false;
     // 标记Fragment是否已经onCreate
@@ -31,7 +27,7 @@ public abstract class BaseFragment extends Fragment {
     private boolean isVisibleToUser = false;
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         isCreated = true;//注：关键步骤
         lazyLoad(savedInstanceState);
@@ -47,10 +43,12 @@ public abstract class BaseFragment extends Fragment {
         lazyLoad(null);
     }
 
+
     /**
      * 懒加载方法，获取数据什么的放到这边来使用，在切换到这个界面时才进行网络请求
      */
     private void lazyLoad(Bundle savedInstanceState) {
+
         //如果该界面不对用户显示、已经加载、fragment还没有创建，
         //三种情况任意一种，不获取数据
         if (!isVisibleToUser || hasLoaded || !isCreated) {
@@ -58,21 +56,6 @@ public abstract class BaseFragment extends Fragment {
         }
         lazyInit(savedInstanceState);
         hasLoaded = true;//注：关键步骤，确保数据只加载一次
-    }
-
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        if (mRootView == null) {
-            mRootView = inflater.inflate(getRootViewId(), container, false);
-        }
-        //缓存的rootView需要判断是否已经被加过parent， 如果有parent则从parent删除，防止发生这个rootview已经有parent的错误。
-        ViewGroup mViewGroup = (ViewGroup) mRootView.getParent();
-        if (mViewGroup != null) {
-            mViewGroup.removeView(mRootView);
-        }
-        initUI(mRootView);
-        return mRootView;
     }
 
     /**
@@ -203,10 +186,6 @@ public abstract class BaseFragment extends Fragment {
         isCreated = false;
         hasLoaded = false;
     }
-
-    public abstract int getRootViewId();
-
-    public abstract void initUI(View v);
 
     /**
      * 子类必须实现的方法，这个方法里面的操作都是需要懒加载的
