@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/white"
     android:orientation="vertical">
 
     <FrameLayout
@@ -41,7 +40,7 @@
         android:maxLines="1"
         android:singleLine="true"
         android:text="原创音乐--你我在一起"
-        android:textColor="#202020"
+        android:textColor="#ffffff"
         android:textSize="15sp" />
 
 

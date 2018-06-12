@@ -1,4 +1,4 @@
-package cn.tourism.tv.ui.zhibo;
+package cn.tourism.tv.ui.zhibo.fra;
 
 import android.os.Bundle;
 import android.view.View;
@@ -9,15 +9,15 @@ import cn.tourism.tv.R;
 import cn.tourism.tv.base.BaseFragment;
 
 /**
- * 描述：直播-观众
+ * 描述：聊天互动
  * 作者：曹斌
  * date:2018/6/7 15:47
  */
-public class AudienceFragment extends BaseFragment {
+public class ChatFragment extends BaseFragment {
 
     @Override
     public int getRootViewId() {
-        return R.layout.fragment_zhibo_audience;
+        return R.layout.fragment_zhibo_chat;
     }
 
     @Override

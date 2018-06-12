@@ -14,6 +14,10 @@ import com.pili.pldroid.player.widget.PLVideoView;
 
 import cn.tourism.tv.R;
 import cn.tourism.tv.base.BaseActivity;
+import cn.tourism.tv.ui.zhibo.fra.AudienceFragment;
+import cn.tourism.tv.ui.zhibo.fra.ChatFragment;
+import cn.tourism.tv.ui.zhibo.fra.LookBackFragment;
+import cn.tourism.tv.ui.zhibo.fra.ZhiBoHintFragment;
 
 public class ZhiBoDetailsActivity extends BaseActivity implements View.OnClickListener {
 

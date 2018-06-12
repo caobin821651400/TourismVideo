@@ -82,6 +82,11 @@
 
     <include layout="@layout/layout_zhibo_details_tab" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#929292" />
+
     <FrameLayout
         android:id="@+id/content"
         android:layout_width="match_parent"

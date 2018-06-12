@@ -18,6 +18,7 @@ import java.util.List;
 
 import cn.tourism.tv.R;
 import cn.tourism.tv.base.BaseFragment;
+import cn.tourism.tv.ui.zhibo.fra.ZhiBoChildFragment;
 
 /**
  * 描述：直播界面
