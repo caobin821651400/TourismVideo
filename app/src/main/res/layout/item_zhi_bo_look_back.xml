@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="@drawable/shape_reply_bg"
+            android:background="@drawable/shape_look_back_txt_bg"
             android:paddingBottom="3dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
@@ -29,6 +29,16 @@
             android:text="艺文"
             android:textColor="#ffffff"
             android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="15dp"
+            android:text="2.2万"
+            android:textColor="#ffffff"
+            android:textSize="13sp" />
     </FrameLayout>
 
     <TextView
