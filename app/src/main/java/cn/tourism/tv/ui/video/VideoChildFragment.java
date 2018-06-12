@@ -23,7 +23,6 @@ import java.util.List;
 
 import cn.tourism.tv.R;
 import cn.tourism.tv.base.BaseViewPagerFragment;
-import cn.tourism.tv.ui.zhibo.ZhiBoDetailsActivity;
 
 /**
  * 描述：视频分类子界面
@@ -86,7 +85,7 @@ public class VideoChildFragment extends BaseViewPagerFragment {
         mAdapter.setOnItemClickListener(new XRecyclerViewAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View v, int position) {
-                launchActivity(ZhiBoDetailsActivity.class, null);
+                launchActivity(VideoDetailsActivity.class, null);
 
             }
         });

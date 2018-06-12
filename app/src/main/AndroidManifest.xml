@@ -50,7 +50,8 @@
         <activity android:name=".ui.me.wallet.SetPayPswActivity" />
         <activity android:name=".ui.me.fans.FansActivity" />
         <activity android:name=".ui.zhibo.ZhiBoClassifyActivity" />
-        <activity android:name=".ui.zhibo.ZhiBoDetailsActivity"></activity>
+        <activity android:name=".ui.zhibo.ZhiBoDetailsActivity" />
+        <activity android:name=".ui.video.VideoDetailsActivity"></activity>
     </application>
 
 </manifest>
