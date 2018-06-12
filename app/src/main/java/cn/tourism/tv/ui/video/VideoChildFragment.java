@@ -1,4 +1,4 @@
-package cn.tourism.tv.ui.zhibo.fra;
+package cn.tourism.tv.ui.video;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -26,15 +26,15 @@ import cn.tourism.tv.base.BaseViewPagerFragment;
 import cn.tourism.tv.ui.zhibo.ZhiBoDetailsActivity;
 
 /**
- * 描述：
+ * 描述：视频分类子界面
  * 作者：曹斌
  * date:2018/6/8 09:36
  */
-public class ZhiBoChildFragment extends BaseViewPagerFragment {
+public class VideoChildFragment extends BaseViewPagerFragment {
 
     private SwipeRefreshLayout swipeLayout;
     private RecyclerView mRecyclerView;
-    private ZhiBoChildAdapter mAdapter;
+    private VideoChildAdapter mAdapter;
 
     private List<String> listDatas = new ArrayList<>();
     //
@@ -70,24 +70,23 @@ public class ZhiBoChildFragment extends BaseViewPagerFragment {
         }
         /*******************************/
 
-        mAdapter = new ZhiBoChildAdapter(mRecyclerView);
+        mAdapter = new VideoChildAdapter(mRecyclerView);
         GridLayoutManager manager = new GridLayoutManager(getActivity(), 2);
         XGridItemDecoration decoration = new XGridItemDecoration
                 .Builder(getActivity())
                 .setColor(getResources().getColor(R.color.transparent))
                 .setHorizontal(18f)
-                .setVertical(18f)
                 .build();
+        addHeadView();
         mRecyclerView.addItemDecoration(decoration);
         mRecyclerView.setLayoutManager(manager);
-        addHeadView();
         mRecyclerView.setAdapter(mAdapter);
         mAdapter.setDataLists(listDatas);
 
         mAdapter.setOnItemClickListener(new XRecyclerViewAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View v, int position) {
-                launchActivity(ZhiBoDetailsActivity.class,null);
+                launchActivity(ZhiBoDetailsActivity.class, null);
 
             }
         });
@@ -97,7 +96,7 @@ public class ZhiBoChildFragment extends BaseViewPagerFragment {
      *
      */
     private void addHeadView() {
-        View headView = LayoutInflater.from(getActivity()).inflate(R.layout.layout_zhi_bo_top, null);
+        View headView = LayoutInflater.from(getActivity()).inflate(R.layout.layout_video_top, null);
         mAdapter.addHeaderView(headView);
     }
 
@@ -114,20 +113,20 @@ public class ZhiBoChildFragment extends BaseViewPagerFragment {
     /**
      *
      */
-    class ZhiBoChildAdapter extends XRecyclerViewAdapter<String> {
+    class VideoChildAdapter extends XRecyclerViewAdapter<String> {
 
         private ImageView ivImage;
         private TextView tvClassify;
         private TextView tvTitle;
 
-        public ZhiBoChildAdapter(@NonNull RecyclerView mRecyclerView) {
-            super(mRecyclerView, R.layout.item_zhi_bo);
+        public VideoChildAdapter(@NonNull RecyclerView mRecyclerView) {
+            super(mRecyclerView, R.layout.item_video_child);
         }
 
         @Override
         protected void bindData(XViewHolder holder, String data, int position) {
             View itemView = holder.getConvertView();
-            itemView.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int)(mImageSize*0.8)));
+            itemView.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) (mImageSize * 0.8)));
             ivImage = (ImageView) itemView.findViewById(R.id.iv_image);
             tvClassify = (TextView) itemView.findViewById(R.id.tv_classify);
             tvTitle = (TextView) itemView.findViewById(R.id.tv_title);
