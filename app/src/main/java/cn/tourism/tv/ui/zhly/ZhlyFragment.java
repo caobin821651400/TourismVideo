@@ -22,7 +22,6 @@ public class ZhlyFragment extends BaseFragment {
 
     @Override
     public void initUI(View v) {
-
     }
 
     @Override
