@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="18dp"
+            android:text="手机上最火的赛车视频"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:text="【视频简介】"
+            android:textColor="#202020" />
+
+        <TextView
+            android:id="@+id/tv_video_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="          上大大阿斯顿撒打算打算大飒飒多个服务方法
+ 嗯嗯翁无多热翁无多热翁无而得翁无第三方如何如何让他忽然就和你今天我任务玩法他认为通过任务
+废物若翁绕弯儿翁热无热无热无热翁无若翁" />
+
+        <TextView
+            android:id="@+id/tv_expand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"
+            android:gravity="right"
+            android:text="全文"
+            android:textColor="#202020" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="12dp"
+            android:background="#eeeeee" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/icon_wifi"
+            android:drawablePadding="12dp"
+            android:drawableRight="@drawable/icon_right_more"
+            android:paddingBottom="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:text="热门视频"
+            android:textColor="#202020"
+            android:textSize="18sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+        <TextView
+            android:id="@+id/tv_comment"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#eeeeee"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="2108条评论"
+            android:textColor="#292929"
+            android:textSize="15sp" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
