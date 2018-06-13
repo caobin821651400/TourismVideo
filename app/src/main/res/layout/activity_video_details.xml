@@ -83,6 +83,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/ll_second_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#eeeeee"
@@ -104,6 +105,7 @@
         <com.cb.xlibrary.view.XCircleImageView
             android:layout_width="23dp"
             android:layout_height="23dp"
+            android:scaleType="centerCrop"
             android:src="@drawable/aaaaa" />
 
 

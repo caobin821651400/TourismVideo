@@ -6,6 +6,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.cb.xlibrary.adapter.XRecyclerViewAdapter;
@@ -17,6 +18,7 @@ import java.util.List;
 
 import cn.tourism.tv.R;
 import cn.tourism.tv.base.BaseActivity;
+import cn.tourism.tv.view.VideoCommentDialog;
 
 /**
  * 视频播放详情界面
@@ -25,10 +27,13 @@ public class VideoDetailsActivity extends BaseActivity implements View.OnClickLi
 
     private TextView tvVideoDetails;
     private TextView tvExpand;
+    private LinearLayout popLayout;
     private RecyclerView mRecyclerView;
     private HotVideoAdapter mAdapter;
     boolean isExpand = true;
     private List<String> hotVideoList = new ArrayList<>();
+    //
+    private VideoCommentDialog commentDialog;
 
 
     @Override
@@ -46,6 +51,7 @@ public class VideoDetailsActivity extends BaseActivity implements View.OnClickLi
         tvVideoDetails = (TextView) findViewById(R.id.tv_video_details);
         tvExpand = (TextView) findViewById(R.id.tv_expand);
         mRecyclerView = findViewById(R.id.recycler_view);
+        popLayout = findViewById(R.id.ll_second_layout);
 
         findViewById(R.id.iv_back).setOnClickListener(this);
         findViewById(R.id.tv_comment).setOnClickListener(this);
@@ -68,6 +74,8 @@ public class VideoDetailsActivity extends BaseActivity implements View.OnClickLi
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setNestedScrollingEnabled(false);
         mAdapter.setDataLists(hotVideoList);
+
+        commentDialog = new VideoCommentDialog(this);
     }
 
     @Override
@@ -89,6 +97,7 @@ public class VideoDetailsActivity extends BaseActivity implements View.OnClickLi
                 isExpand = !isExpand;
                 break;
             case R.id.tv_comment://底部评论数量
+                commentDialog.showDialog(popLayout);
                 break;
         }
     }
