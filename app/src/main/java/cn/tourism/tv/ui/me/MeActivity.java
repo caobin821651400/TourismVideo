@@ -66,6 +66,7 @@ public class MeActivity extends BaseActivity implements View.OnClickListener {
                 launchActivity(SettingMainActivity.class, null);
                 break;
             case R.id.iv_head:
+                launchActivity(ModifyInfoActivity.class,null);
                 break;
             case R.id.ll_fans://粉丝
                 launchActivity(FansActivity.class, null);

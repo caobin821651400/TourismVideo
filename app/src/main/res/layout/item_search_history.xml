@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants">
+
+    <TextView
+        android:id="@+id/tv_flow_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/shape_reply_bg"
+        android:gravity="center"
+        android:paddingBottom="3dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="3dp"
+        android:text="dasdsdaads"
+        android:textColor="#707070"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/iv_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-18dp"
+        android:padding="3dp"
+        android:layout_marginTop="0dp"
+        android:layout_toRightOf="@+id/tv_flow_item"
+        android:src="@drawable/icon_remove" />
+
+</RelativeLayout>

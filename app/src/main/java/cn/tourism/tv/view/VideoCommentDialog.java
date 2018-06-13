@@ -40,7 +40,7 @@ public class VideoCommentDialog implements XBasePopupWindow.ViewInterface {
                 .setWidthAndHeight(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
                 .setAnimationStyle(R.style.AnimUp)
                 .setViewOnclickListener(this)
-                .setOutsideTouchable(false)
+                .setOutsideTouchable(true)
                 .create();
         popupWindow.showAsDropDown(view);
     }

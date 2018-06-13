@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import cn.tourism.tv.R;
 import cn.tourism.tv.base.BaseFragment;
+import cn.tourism.tv.ui.SearchActivity;
 import cn.tourism.tv.ui.me.MeActivity;
 
 /**
@@ -31,6 +32,7 @@ public class TuiJianFragment extends BaseFragment implements View.OnClickListene
     @Override
     public void initUI(View v) {
         v.findViewById(R.id.iv_head).setOnClickListener(this);
+        v.findViewById(R.id.tv_search).setOnClickListener(this);
         tvSearch = (TextView) v.findViewById(R.id.tv_search);
         ivCamera = (ImageView) v.findViewById(R.id.iv_camera);
         mRecyclerView = (RecyclerView) v.findViewById(R.id.recycler_view);
@@ -51,6 +53,9 @@ public class TuiJianFragment extends BaseFragment implements View.OnClickListene
         switch (view.getId()) {
             case R.id.iv_head:
                 launchActivity(MeActivity.class, null);
+                break;
+            case R.id.tv_search:
+                launchActivity(SearchActivity.class, null);
                 break;
         }
     }

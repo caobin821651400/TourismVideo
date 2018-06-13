@@ -51,7 +51,8 @@
         <activity android:name=".ui.me.fans.FansActivity" />
         <activity android:name=".ui.zhibo.ZhiBoClassifyActivity" />
         <activity android:name=".ui.zhibo.ZhiBoDetailsActivity" />
-        <activity android:name=".ui.video.VideoDetailsActivity"></activity>
+        <activity android:name=".ui.video.VideoDetailsActivity" />
+        <activity android:name=".ui.SearchActivity"></activity>
     </application>
 
 </manifest>
