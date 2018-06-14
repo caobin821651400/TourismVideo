@@ -35,6 +35,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         return R.layout.activity_main;
     }
 
+
     @Override
     public void initUI() {
         if (fragmentManager == null) {
