@@ -13,6 +13,7 @@ import com.cb.xlibrary.adapter.XRecyclerViewAdapter;
 import com.cb.xlibrary.adapter.XViewHolder;
 import com.cb.xlibrary.widget.XSwipeRefreshLayout;
 import com.youth.banner.Banner;
+import com.youth.banner.BannerConfig;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -82,6 +83,7 @@ public class ZiXunChildFragment extends BaseFragment {
         mBanner.setLayoutParams(new AbsListView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, MyUtils.getScreenHeight(getActivity()) / 5));
         mBanner.setImageLoader(new GlideImageLoader());
         mBanner.update(listBanners);
+        mBanner.setIndicatorGravity(BannerConfig.LEFT);
         mBanner.start();
         mAdapter.addHeaderView(headerView);
     }
