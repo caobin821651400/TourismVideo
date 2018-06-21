@@ -7,6 +7,8 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 
 import com.cb.xlibrary.statusbar.StatusBarUtils;
+import com.cb.xlibrary.utils.XActivityStack;
+import com.cb.xlibrary.utils.XAppUtils;
 
 import cn.tourism.tv.R;
 import cn.tourism.tv.base.BaseActivity;
@@ -14,6 +16,7 @@ import cn.tourism.tv.ui.me.account.AccountSafeActivity;
 import cn.tourism.tv.ui.me.setting.ContactUsActivity;
 import cn.tourism.tv.ui.me.setting.MyMsgActivity;
 import cn.tourism.tv.ui.me.setting.OpinionActivity;
+import cn.tourism.tv.utils.DeleteAsyncTask;
 
 public class SettingMainActivity extends BaseActivity implements View.OnClickListener {
 
@@ -67,6 +70,7 @@ public class SettingMainActivity extends BaseActivity implements View.OnClickLis
                 launchActivity(OpinionActivity.class, null);
                 break;
             case R.id.tv_clear_cache://清缓存
+                new DeleteAsyncTask().execute();
                 break;
             case R.id.tv_account_safe://账号安全
                 launchActivity(AccountSafeActivity.class, null);

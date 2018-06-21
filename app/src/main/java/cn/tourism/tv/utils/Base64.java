@@ -1,4 +1,4 @@
-package cn.tourism.tv;
+package cn.tourism.tv.utils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
