@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import com.cb.xlibrary.dialog.XTipDialog;
 import com.cb.xlibrary.statusbar.StatusBarUtils;
 import com.cb.xlibrary.utils.XActivityStack;
 
@@ -80,11 +81,30 @@ public class SettingMainActivity extends BaseActivity implements View.OnClickLis
                 launchActivity(ContactUsActivity.class, null);
                 break;
             case R.id.btn_sign_out://退出
-                launchActivity(SignInActivity.class, null);
-                finish();
-                XActivityStack.getInstance().findActivity(MeActivity.class).finish();
-                XActivityStack.getInstance().findActivity(MainActivity.class).finish();
+                exitApp();
                 break;
         }
+    }
+
+    private void exitApp() {
+        new XTipDialog.Builder(this)
+                .setMessage("确定退出吗？")
+                .title("温馨提示")
+                .leftBtnTxt("取消")
+                .rightBtnTxt("确定")
+                .setCancelable(true)
+                .setSureClickListener(new XTipDialog.BtnClickListener() {
+                    @Override
+                    public void leftBtnClick() {
+                    }
+
+                    @Override
+                    public void rightBtnClick() {
+                        launchActivity(SignInActivity.class, null);
+                        finish();
+                        XActivityStack.getInstance().findActivity(MeActivity.class).finish();
+                        XActivityStack.getInstance().findActivity(MainActivity.class).finish();
+                    }
+                }).create().show();
     }
 }
