@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.cb.xlibrary.statusbar.StatusBarUtils;
+import com.cb.xlibrary.utils.XActivityStack;
 
 import cn.tourism.tv.R;
 import cn.tourism.tv.base.BaseActivity;
@@ -21,12 +22,19 @@ public class MeActivity extends BaseActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        XActivityStack.getInstance().addActivity(this);
         StatusBarUtils.immersive(this);
     }
 
     @Override
     public int getRootViewId() {
         return R.layout.activity_me;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        XActivityStack.getInstance().findActivity(MeActivity.class).finish();
     }
 
     @Override
@@ -66,7 +74,7 @@ public class MeActivity extends BaseActivity implements View.OnClickListener {
                 launchActivity(SettingMainActivity.class, null);
                 break;
             case R.id.iv_head:
-                launchActivity(ModifyInfoActivity.class,null);
+                launchActivity(ModifyInfoActivity.class, null);
                 break;
             case R.id.ll_fans://粉丝
                 launchActivity(FansActivity.class, null);

@@ -5,7 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 
-import com.cb.xlibrary.utils.XLogUtils;
+import com.cb.xlibrary.utils.XActivityStack;
 
 import cn.tourism.tv.base.BaseActivity;
 import cn.tourism.tv.ui.info.InfoFragment;
@@ -28,6 +28,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        XActivityStack.getInstance().addActivity(this);
     }
 
     @Override
@@ -35,6 +36,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         return R.layout.activity_main;
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        XActivityStack.getInstance().findActivity(MainActivity.class).finish();
+    }
 
     @Override
     public void initUI() {
@@ -159,6 +165,25 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         }
         if (zhlyFragment != null) {
             transaction.hide(zhlyFragment);
+        }
+    }
+
+    private long waitTime = 2000;
+    private long touchTime = 0;
+
+    @Override
+    public void onBackPressed() {
+        againExit();
+    }
+
+    private void againExit() {
+        long currentTime = System.currentTimeMillis();
+        if ((currentTime - touchTime) >= waitTime) {
+            toast("再按一次，退出程序!");
+            touchTime = currentTime;
+        } else {
+            finish();
+            System.exit(0);
         }
     }
 }

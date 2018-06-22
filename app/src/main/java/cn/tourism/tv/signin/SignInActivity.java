@@ -59,4 +59,23 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
                 break;
         }
     }
+
+    private long waitTime = 2000;
+    private long touchTime = 0;
+
+    @Override
+    public void onBackPressed() {
+        againExit();
+    }
+
+    private void againExit() {
+        long currentTime = System.currentTimeMillis();
+        if ((currentTime - touchTime) >= waitTime) {
+            toast("再按一次，退出程序!");
+            touchTime = currentTime;
+        } else {
+            finish();
+            System.exit(0);
+        }
+    }
 }

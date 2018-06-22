@@ -8,10 +8,11 @@ import android.widget.TextView;
 
 import com.cb.xlibrary.statusbar.StatusBarUtils;
 import com.cb.xlibrary.utils.XActivityStack;
-import com.cb.xlibrary.utils.XAppUtils;
 
+import cn.tourism.tv.MainActivity;
 import cn.tourism.tv.R;
 import cn.tourism.tv.base.BaseActivity;
+import cn.tourism.tv.signin.SignInActivity;
 import cn.tourism.tv.ui.me.account.AccountSafeActivity;
 import cn.tourism.tv.ui.me.setting.ContactUsActivity;
 import cn.tourism.tv.ui.me.setting.MyMsgActivity;
@@ -79,6 +80,10 @@ public class SettingMainActivity extends BaseActivity implements View.OnClickLis
                 launchActivity(ContactUsActivity.class, null);
                 break;
             case R.id.btn_sign_out://退出
+                launchActivity(SignInActivity.class, null);
+                finish();
+                XActivityStack.getInstance().findActivity(MeActivity.class).finish();
+                XActivityStack.getInstance().findActivity(MainActivity.class).finish();
                 break;
         }
     }
