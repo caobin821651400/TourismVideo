@@ -1,7 +1,6 @@
 package cn.tourism.tv.ui.zhibo;
 
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -12,6 +11,7 @@ import android.widget.TextView;
 
 import com.cb.xlibrary.utils.XLogUtils;
 import com.cb.xlibrary.view.XCircleImageView;
+import com.cb.xlibrary.widget.tab.XTabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +30,7 @@ public class ZhiBoFragment extends BaseFragment {
     private XCircleImageView ivHead;
     private TextView tvSearch;
     private ImageView ivCamera;
-    private TabLayout tabLayout;
+    private XTabLayout tabLayout;
     private ImageView btnMore;
     private ViewPager mViewPager;
 
@@ -45,12 +45,12 @@ public class ZhiBoFragment extends BaseFragment {
 
     @Override
     public void initUI(View v) {
-        ivHead = (XCircleImageView) v.findViewById(R.id.iv_head);
-        tvSearch = (TextView) v.findViewById(R.id.tv_search);
-        ivCamera = (ImageView) v.findViewById(R.id.iv_camera);
-        tabLayout = (TabLayout) v.findViewById(R.id.tabLayout);
-        btnMore = (ImageView) v.findViewById(R.id.btnMore);
-        mViewPager = (ViewPager) v.findViewById(R.id.view_pager);
+        ivHead = v.findViewById(R.id.iv_head);
+        tvSearch = v.findViewById(R.id.tv_search);
+        ivCamera = v.findViewById(R.id.iv_camera);
+        tabLayout = v.findViewById(R.id.tabLayout);
+        btnMore = v.findViewById(R.id.btnMore);
+        mViewPager = v.findViewById(R.id.view_pager);
 
         listFragment = new ArrayList<>();
         listTitle = new ArrayList<>();

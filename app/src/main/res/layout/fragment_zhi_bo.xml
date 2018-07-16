@@ -15,19 +15,20 @@
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
-        <android.support.design.widget.TabLayout
+        <com.cb.xlibrary.widget.tab.XTabLayout
             android:id="@+id/tabLayout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/white"
-            app:tabIndicatorColor="#009296"
-            app:tabIndicatorHeight="3dp"
-            app:tabMinWidth="45dp"
-            app:tabMode="scrollable"
-            app:tabSelectedTextColor="#009296"
-            app:tabTextAppearance="@style/TabLayoutTextAppearance"
-            app:tabTextColor="#979393" />
+            app:x_tabIndicatorColor="#009296"
+            app:x_tabIndicatorHeight="3dp"
+            app:x_tabIndicatorWidth="45dp"
+            app:x_tabIndicatorAnimation="false"
+            app:x_tabMode="scrollable"
+            app:x_tabSelectedTextColor="#009296"
+            app:x_tabTextAppearance="@style/TabLayoutTextAppearance"
+            app:x_tabTextColor="#979393" />
 
         <ImageView
             android:id="@+id/btnMore"
