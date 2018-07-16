@@ -61,8 +61,8 @@
         <item name="android:backgroundDimEnabled">false</item>
     </style>
     <style name="DatePickerDialogAnim" mce_bogus="1" parent="android:Animation">
-        <item name="android:windowEnterAnimation">@anim/com_ycuwq_datepicker_dialog_in</item>
-        <item name="android:windowExitAnimation">@anim/com_ycuwq_datepicker_dialog_out</item>
+        <item name="android:windowEnterAnimation">@anim/datepicker_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/datepicker_dialog_out</item>
     </style>
 
     <style name="XTabLayout_Default_Style" parent="Base.Widget.Design.TabLayout">
